@@ -182,7 +182,7 @@ class ZMQBindings {
   DynamicLibrary _dlOpenPlatformSpecific(final String name,
       {final String? path}) {
     if (Platform.isLinux) {
-      return DynamicLibrary.open('libzmq.so');
+      return DynamicLibrary.open('libzmq.so.5');
     }
 
     if (Platform.isIOS || Platform.isMacOS) {
