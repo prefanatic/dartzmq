@@ -181,7 +181,8 @@ class ZMQBindings {
 
   DynamicLibrary _dlOpenPlatformSpecific(final String name,
       {final String? path}) {
-    if (Platform.isIOS || Platform.isMacOS) {
+
+    if (Platform.isIOS || Platform.isMacOS || Platform.isLinux) {
       return DynamicLibrary.process();
     }
 
